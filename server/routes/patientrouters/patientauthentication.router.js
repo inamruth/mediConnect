@@ -1,5 +1,5 @@
 const patientModel = require('../../models/patient/patient.model')
-const cors = require('cors');
+// const cors = require('cors');
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');

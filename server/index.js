@@ -23,9 +23,13 @@ app.use(session({
 
 app.use(express.json());
 
-const patientRouter = require('./routes/patientrouters/patientauthentication.router');
-const doctorRouter = require('./routes/doctorrouters/doctorauthentication.router');
-const hospitalRouter = require('./routes/hospitalrouters/hospitalauthentication.router');
+const patientAuthenticationRouter = require('./routes/patientrouters/patientauthentication.router');
+const patientProfileRouter = require('./routes/patientrouters/patientprofile.router');
+
+const doctorAuthenticationRouter = require('./routes/doctorrouters/doctorauthentication.router');
+const doctorProfileRouter = require('./routes/doctorrouters/doctorprofile.router');
+
+const hospitalAuthenticationRouter = require('./routes/hospitalrouters/hospitalauthentication.router');
 
 mongoose.connect(db_url, {
     tls: true,
@@ -33,13 +37,16 @@ mongoose.connect(db_url, {
     .then(() => console.log("Mongo Connected"))
     .catch(err => console.log(err));
 
+
 // Patient End Points
-app.use('/api/patient', patientRouter);
+app.use('/api/patient', patientAuthenticationRouter);
+app.use('/api/patient/profile', patientProfileRouter);
 
 // Doctor End Points
-app.use('/api/doctor', doctorRouter);
+app.use('/api/doctor', doctorAuthenticationRouter);
+app.use('/api/doctor/profile', doctorProfileRouter);
 
 // Hospital End Points
-app.use('/api/hospital', hospitalRouter);
+app.use('/api/hospital', hospitalAuthenticationRouter);
 
 app.listen(port, () => console.log(`Server is running on ${port}`));
