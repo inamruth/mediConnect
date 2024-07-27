@@ -7,11 +7,13 @@ const HospitalSchema = mongoose.Schema({
     },
     mobile: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
         type: String,
@@ -19,6 +21,6 @@ const HospitalSchema = mongoose.Schema({
     }
 });
 
-const HospitalModel = mongoose.model("patient", HospitalSchema);
+const HospitalModel = mongoose.model("hospital", HospitalSchema);
 
 module.exports = HospitalModel;
