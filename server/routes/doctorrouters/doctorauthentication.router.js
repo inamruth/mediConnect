@@ -7,12 +7,6 @@ const session = require('express-session');
 
 const router = express.Router();
 
-// router.use(cors({
-//     origin: ["http://localhost:3000"],
-//     methods: ["GET", "POST"],
-//     credentials: true
-// }));
-
 router.use(express.json());
 
 router.use(session({
