@@ -2,7 +2,9 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <div>login</div>
+    <section>
+      <div>login page</div>
+    </section>
   )
 }
 

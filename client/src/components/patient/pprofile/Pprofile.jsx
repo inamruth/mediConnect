@@ -2,7 +2,9 @@ import React from 'react'
 
 const Pprofile = () => {
   return (
-    <div>pprofile</div>
+    <section>
+      <div>patient profile display</div>
+    </section>
   )
 }
 

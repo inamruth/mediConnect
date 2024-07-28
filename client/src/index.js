@@ -8,7 +8,6 @@ import Dashboard from './components/patient/dashboard/Dashboard';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
     <Dashboard />
   </React.StrictMode>
 );
