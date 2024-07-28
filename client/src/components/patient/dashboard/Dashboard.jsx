@@ -1,13 +1,10 @@
 import React from 'react'
-
+import './Dashboard.css'
 const Dashboard = () => {
   return (
-    <section>
-      <div>
-        Welcome!
-        <p>jos</p>
-      </div>
-    </section>
+    <>
+      <div></div>
+    </>
   )
 }
 
